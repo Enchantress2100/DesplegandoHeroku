@@ -46,7 +46,7 @@ app.get("/", async (req, res) => {
   });
 });
 app.get("/users", async (req, res) => {
-  const respuesta = await getServicios();
+  const respuesta = await getUsuarios();
   res.send(respuesta);
 });
 

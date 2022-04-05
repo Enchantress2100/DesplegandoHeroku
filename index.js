@@ -80,6 +80,6 @@ app.get("/user-delete/:id", async (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
+app.listen(port, () => {
   console.log(`Server on and working OK`);
 });

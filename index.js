@@ -5,9 +5,8 @@ const app = express();
 const exphbs = require("express-handlebars");
 const port = process.env.PORT || 5000
 const getUsuarios= require('./getusuarios')
-
-//importar funciones de base.js
-const {nuevoServicio, deleteServicio } = require("./base");
+const createUsuarios = require('./createusuarios')
+const eliminarUsuario= require('./eliminarUsuario')
 
 //middleware de bodyParser
 const bodyParser = require("body-parser");
@@ -53,7 +52,7 @@ app.get("/users", async (req, res) => {
 //ruta para crear nuevas tareas
 app.post("/users", async (req, res) => {
   const { username, contraseña, email, fechaCreacion } = req.body;
-  await nuevoServicio(username, contraseña, email, fechaCreacion);
+  await createUsuarios(username, contraseña, email, fechaCreacion);
   res.redirect("/");
 });
 
@@ -67,7 +66,7 @@ app.get("/user-create", async (req, res) => {
 app.delete("/users/:id", async (req, res) => {
   const { id } = req.params;
   let id1 = id.slice(3);
-  const respuesta = await deleteServicio(id1);
+  const respuesta = await eliminarUsuario(id1);
   respuesta > 0
     ? res.send(`la tarea de id ${id} fue eliminado con exito`)
     : res.send("no existe una tarea con ese id");
@@ -76,7 +75,7 @@ app.delete("/users/:id", async (req, res) => {
 app.get("/user-delete/:id", async (req, res) => {
   const { id } = req.params;
   let id1 = id.slice(3);
-  const respuesta = await deleteServicio(id1);
+  const respuesta = await eliminarUsuario(id1);
   res.render("eliminar", {
     layout: "eliminar",
     respuesta,

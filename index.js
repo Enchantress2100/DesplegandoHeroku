@@ -3,6 +3,7 @@
 const express = require("express");
 const app = express();
 const exphbs = require("express-handlebars");
+const getUsuarios=require('./getusuarios')
 const port= process.env.PORT || 5000
 
 //importar funciones de base.js
@@ -38,7 +39,7 @@ app.use(
 
 //ruta para visualizar las tareas
 app.get("/", async (req, res) => {
-  const users = await getServicios();
+  const users = await getUsuarios();
   res.render("inicio", {
     layout: "inicio",
     users,

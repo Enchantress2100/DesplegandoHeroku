@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="/bootstrap/bootstrap.css">
 <div>
     {{#if usuarios}}
     <div class="container-fluid pt-5 w-50">
@@ -19,7 +19,7 @@
               <th scope="col">{{this.username}}</th>
               <th scope="col">{{this.contraseña}}</th>
               <th scope="col">{{this.email}}</th>
-              <th scope="col">{{this.fechadeCreacion}}</th>
+              <th scope="col">{{this.fechaCreacion}}</th>
               <th scope="col"><a href="/user-delete/id={{this.id}}" id="eliminar"><button type="button" class="btn btn-danger">Eliminar</button></a></th>
             </tr>
             {{/each}}
@@ -27,3 +27,4 @@
           </table>
           </div>
           </div>
+          <script src="/BootstrapJs/bootstrap.js"></script> 

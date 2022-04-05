@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const exphbs = require("express-handlebars");
-const port=process.env.PORT || 5000
+const port= process.env.PORT || 5000
 
 //importar funciones de base.js
 const { getServicios, nuevoServicio, deleteServicio } = require("./base");

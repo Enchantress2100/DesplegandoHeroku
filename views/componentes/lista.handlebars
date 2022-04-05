@@ -1,0 +1,30 @@
+
+<div>
+
+    {{#if usuarios}}
+    <div class="container-fluid pt-5 w-50">
+        <table class="table">
+          <thead class="thead-dark">
+              <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Username</th>
+              <th scope="col">Contraseña</th>
+              <th scope="col">Email</th>
+              <th scope="col">Fecha de creación</th>
+              <th scope="col">¿Eliminar?</th>
+            </tr>
+          {{/if}}
+            {{#each usuarios}}
+            <tr>
+              <th scope="col">{{this.id}}</th>
+              <th scope="col">{{this.username}}</th>
+              <th scope="col">{{this.contraseña}}</th>
+              <th scope="col">{{this.email}}</th>
+              <th scope="col">{{this.fechadeCreacion}}</th>
+              <th scope="col"><a href="/todo-delete/id={{this.id}}" id="eliminar"><button type="button" class="btn btn-danger">Eliminar</button></a></th>
+            </tr>
+            {{/each}}
+          </thead>
+          </table>
+          </div>
+          </div>

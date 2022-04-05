@@ -9,4 +9,3 @@ CREATE TABLE usuarios (
     email varchar(255) NOT NULL UNIQUE,
     fechaCreacion varchar(255) NOT NULL
 );
-

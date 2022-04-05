@@ -45,5 +45,5 @@ async function deleteServicio(id) {
 }
 
       
-module.exports = db, getUsuarios, nuevoServicio, deleteServicio;
+module.exports = { db, getUsuarios, nuevoServicio, deleteServicio };
         

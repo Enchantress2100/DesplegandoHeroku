@@ -3,11 +3,10 @@
 const express = require("express");
 const app = express();
 const exphbs = require("express-handlebars");
-const getUsuarios=require('./getusuarios')
 const port = process.env.PORT || 5000
 
 //importar funciones de base.js
-const { db, nuevoServicio, deleteServicio } = require("./base");
+const { getUsuarios, nuevoServicio, deleteServicio } = require("./base");
 
 //middleware de bodyParser
 const bodyParser = require("body-parser");

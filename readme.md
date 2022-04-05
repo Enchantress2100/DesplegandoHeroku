@@ -19,7 +19,7 @@ const client = new Client({
 10. En el archivo index, facilitar que Heroku disponibilice el puerto con: const port=process.env.PORT || 5000
 11.Instalar Heroku CLI siguiendo las instrucciones de: https://devcenter.heroku.com/articles/heroku-cli
 12. Ejecutar heroku login en la terminal, iniciar sesión.
-13. Crear repositorio en git del proyecto.
+13. Crear repositorio en git del proyecto. Mantenerlo actualizado.
 14. Ejecutar en terminal: heroku git:remote -a usuarios-consuelo
 15. Subir la rama master del proyecto: git push heroku master . Si no estamos en la rama master, dirigirnos a ella con git checkout -b master.
 16. Acceder a la dirección https://usuarios-consuelo.herokuapp.com/. Realizar pruebas. Para eliminar, por favor refrescar la página.

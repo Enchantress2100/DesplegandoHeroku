@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/bootstrap/bootstrap.css">
 <div>
-    {{#if usuarios}}
+    {{#if users}}
     <div class="container-fluid pt-5 w-50">
         <table class="table">
           <thead class="thead-dark">
@@ -13,7 +13,7 @@
               <th scope="col">¿Eliminar?</th>
             </tr>
           {{/if}}
-            {{#each usuarios}}
+            {{#each users}}
             <tr>
               <th scope="col">{{this.id}}</th>
               <th scope="col">{{this.username}}</th>
